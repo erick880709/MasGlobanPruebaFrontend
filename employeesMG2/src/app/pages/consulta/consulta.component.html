@@ -1,0 +1,42 @@
+<h2>Consult employees Mas Globan</h2>
+<div class = "form-container">
+    <div class="input-group">
+        <div class ="input-group-prepend">
+            <div class="imput-group-text">ID</div>
+        </div>
+        <input input type="text" class="form-control" placeholder="cedula" aria-label="cedula" aria-describedby="cedula"#cedula>
+    </div>
+    
+    <div class="button-row">
+        <button (click)="getDatos(cedula.values)" type="button" class="button">Mostror</button>
+    </div>
+  
+    
+   <!--- <div *ngIf="this.bandera">-->
+    <div class="table-responsive table-responsive-sm">
+        <table class="table table-sm table-striped" #tabla> 
+          <thead> 
+            <tr>  
+              <th>identificacion</th>
+              <th scope="col">nombre</th>
+              <th scope="col">apellido</th> 
+              <th scope="col">celular</th>   
+              <th scope="col">tipoContrato</th>   
+              <th scope="col">salary_Contrato</th>   
+            </tr>    
+          </thead>   
+          <tbody>    
+             <tr *ngFor="let item of datos">   
+              <td>{{item.identificacion}}</td>   
+              <td>{{item.nombre}}</td>    
+              <td>{{item.apellido}}</td>    
+              <td>{{item.celular}}</td>
+              <td>{{item.tipoContrato}}</td>
+              <td>{{item.salary_Contrato}}</td> 
+            </tr>   
+          </tbody>   
+        </table>   
+      </div>
+   <!-- </div>-->
+    
+</div>
